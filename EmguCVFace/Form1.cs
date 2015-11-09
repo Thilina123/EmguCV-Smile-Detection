@@ -24,25 +24,31 @@ namespace EmguCVFace
         public Form1()
         {
             InitializeComponent();
-            // Default web camera başlatılıyor.
-            cap = new Capture(0);
+            // Default web camera starting..
+            try
+            {
+                cap = new Capture(0);
+            }
+            catch (TypeInitializationException e)
+            {
 
-            //Önceden tanımlanmış hazır ağız ve yüz yapısı tanımlanılıyor.
-            CascadeClassifier haar = new CascadeClassifier(@"C:\Users\Emre\Desktop\EmguCV Bitirme\FaceDetectedLive\FaceDetectedLive\XML'S\haarcascade_frontalface_default.xml");
-            CascadeClassifier mthxml = new CascadeClassifier(@"C:\Users\Emre\Desktop\EmguCV Bitirme\FaceDetectedLive\FaceDetectedLive\XML'S\haarcascade_smile.xml");
+            }
+            //Predefined ready mouth and face structure is not recognized.
+            CascadeClassifier haar = new CascadeClassifier(@"D:\Projects\EmguCV-Smile-Detection\URL'S\haarcascade_frontalface_default.xml");
+            CascadeClassifier mthxml = new CascadeClassifier(@"D:\Projects\EmguCV-Smile-Detection\URL'S\haarcascade_smile.xml");
 
         }
 
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            txtSmiling.Text = "Mutsuz"; // Bu adımda gülmediğimiz zaman üzgün olduğumuzu anlatabilmek için en başa yazdık.
+            txtSmiling.Text = "Mutsuz"; // We wrote to the chief to tell them we were sorry when we laugh at this step.
 
-            pictureBox2.Image = Image.FromFile(@"C:\Users\Emre\Desktop\EmguCV Bitirme\EmguCVFace\Images\unhappy.png");//Üzgün simgesi.
+            pictureBox2.Image = Image.FromFile(@"D:\Projects\EmguCV-Smile-Detection\Moods\unhappy.png");//Sorry icon.
 
-            Image<Bgr, Byte> nextFrame = cap.QueryFrame(); //Yeni bir çerçeve oluşturduk.
+            Image<Bgr, Byte> nextFrame = cap.QueryFrame(); //We have created a new framework.
 
-            Image<Gray, Byte> grayFrame = nextFrame.Convert<Gray, Byte>(); // Image'i grayscale olarak çerçeveyi değiştiriyoruz.
+            Image<Gray, Byte> grayFrame = nextFrame.Convert<Gray, Byte>(); // We're changing the frame as a grayscale image.
 
             //Dengeleme Adımı
             grayFrame._EqualizeHist();
@@ -54,9 +60,9 @@ namespace EmguCVFace
 
 
             //XML dosyalarından tanımlanacak kısımların değerleri hazır olarak alınmaktadır.
-            CascadeClassifier face = new CascadeClassifier(@"C:\Users\Emre\Desktop\EmguCV Bitirme\FaceDetectedLive\FaceDetectedLive\XML'S\haarcascade_frontalface_default.xml");
-            CascadeClassifier eye = new CascadeClassifier(@"C:\Users\Emre\Desktop\EmguCV Bitirme\FaceDetectedLive\FaceDetectedLive\XML'S\haarcascade_eye.xml");
-            CascadeClassifier smile = new CascadeClassifier(@"C:\Users\Emre\Desktop\EmguCV Bitirme\FaceDetectedLive\FaceDetectedLive\XML'S\haarcascade_smile.xml");
+            CascadeClassifier face = new CascadeClassifier(@"D:\Projects\EmguCV-Smile-Detection\URL'S\haarcascade_frontalface_default.xml");
+            CascadeClassifier eye = new CascadeClassifier(@"D:\Projects\EmguCV-Smile-Detection\URL'S\haarcascade_eye.xml");
+            CascadeClassifier smile = new CascadeClassifier(@"D:\Projects\EmguCV-Smile-Detection\URL'S\haarcascade_smile.xml");
 
             //<!----------------------------------------------------------!>
 
@@ -122,7 +128,7 @@ namespace EmguCVFace
                 nextFrame.Draw(smile1, new Bgr(Color.Yellow), 2);
                 if (smiles != null) //Gülücük istenilen ebattaysa listeye ata.Liste dolusya gülüyor.Boşsa gülmüyor.
                     txtSmiling.Text = "Mutlu";
-                pictureBox2.Image = Image.FromFile(@"C:\Users\Emre\Desktop\EmguCV Bitirme\EmguCVFace\Images\happy.png");
+                pictureBox2.Image = Image.FromFile(@"D:\Projects\EmguCV-Smile-Detection\Moods\happy.png");
 
             }
 
@@ -135,7 +141,7 @@ namespace EmguCVFace
         {
             if (txtSmiling.Text == "Mutlu") //Gülüyorsa bu dosyadaki müzikler çalıcaktır.
             {
-                var soundsRoot = @"C:\Users\Emre\Desktop\FastMotion";
+                var soundsRoot = @"D:\Projects\EmguCV-Smile-Detection\sounds";
                 var rand = new Random();
                 var soundFiles = Directory.GetFiles(soundsRoot, "*.wav");
                 var playSound = soundFiles[rand.Next(0, soundFiles.Length)];
@@ -144,7 +150,7 @@ namespace EmguCVFace
             }
             else if (txtSmiling.Text == "Mutsuz") //Gülmüyorsa bu dosyadaki müzikler çalıcaktır.
             {
-                var soundsRoot = @"C:\Users\Emre\Desktop\SlowMotion";
+                var soundsRoot = @"D:\Projects\EmguCV-Smile-Detection\sounds";
                 var rand = new Random();
                 var soundFiles = Directory.GetFiles(soundsRoot, "*.wav");
                 var playSound = soundFiles[rand.Next(0, soundFiles.Length)];
@@ -172,17 +178,17 @@ namespace EmguCVFace
                 string[] array1 = Directory.GetFiles(@"C:\Users\Emre\Desktop\FastMotion");
                 foreach (string name in array1)
                 {
-                    listBox1.Items.Add(name); //Listbox'a müzikler atandı.
+                    listBox1.Items.Add(name); //Listbox music appointed
                 }
             }
             else if (txtSmiling.Text == "Mutsuz")
             {
                 lblMusic.Text = "Mutsuz Müzikler";
                 listBox1.Items.Clear();
-                string[] array1 = Directory.GetFiles(@"C:\Users\Emre\Desktop\SlowMotion");
+                string[] array1 = Directory.GetFiles(@"D:\Projects\EmguCV-Smile-Detection\sounds");
                 foreach (string name in array1)
                 {
-                    listBox1.Items.Add(name); //Listbox'a müzikler atandı.
+                    listBox1.Items.Add(name); //Listbox music appointed.
                 }
             }
         }

@@ -121,7 +121,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>diL3vKgKV2wo/Jg8TUj3q5KpeGR/SuRvkk001p+3m/4=</dsig:DigestValue>
+        <dsig:DigestValue>6eEKBVUFNr3PCaxenCY9BauwAH3dwuH+gdvq5eyFwTs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -156,6 +156,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>jNRUvINBdgUThoAepY1ZMU4a+oe+fhKP5hG6xD8w4KA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="opencv_core2411.dll" size="2573312">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vqqiDoMIdWR1pK7Uj41XZjHc10U99Is4tRRGOXEj1Cg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="opencv_imgproc2411.dll" size="2236416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VZNYJ0tqjrObzUwLTStkpnMrkOxULQTQblkjbcbXJNc=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

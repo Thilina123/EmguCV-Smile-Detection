@@ -47,3 +47,18 @@ C:\Users\Emre\Desktop\TAKAS\EmguCV Bitirme\EmguCVFace\EmguCVFace\obj\x64\Debug\E
 C:\Users\Emre\Desktop\TAKAS\EmguCV Bitirme\EmguCVFace\EmguCVFace\obj\x64\Debug\EmguCVFace.csproj.GenerateResource.Cache
 C:\Users\Emre\Desktop\TAKAS\EmguCV Bitirme\EmguCVFace\EmguCVFace\obj\x64\Debug\EmguCVFace.exe.manifest
 C:\Users\Emre\Desktop\TAKAS\EmguCV Bitirme\EmguCVFace\EmguCVFace\obj\x64\Debug\EmguCVFace.application
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\bin\x64\Debug\EmguCVFace.exe.config
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\bin\x64\Debug\EmguCVFace.exe.manifest
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\bin\x64\Debug\EmguCVFace.application
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\bin\x64\Debug\EmguCVFace.exe
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\bin\x64\Debug\EmguCVFace.pdb
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\bin\x64\Debug\EntityFramework.dll
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\bin\x64\Debug\EntityFramework.xml
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.Form1.resources
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.Properties.Resources.resources
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.csproj.GenerateResource.Cache
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.exe.manifest
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.application
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.exe
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.pdb
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.csprojResolveAssemblyReference.cache
