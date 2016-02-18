@@ -28,14 +28,14 @@ namespace EmguCVFace
             try
             {
                 cap = new Capture(0);
+                //Predefined ready mouth and face structure is not recognized.
+                CascadeClassifier haar = new CascadeClassifier(@"D:\Projects\EmguCV-Smile-Detection\URL'S\haarcascade_frontalface_default.xml");
+                CascadeClassifier mthxml = new CascadeClassifier(@"D:\Projects\EmguCV-Smile-Detection\URL'S\haarcascade_smile.xml");
             }
             catch (TypeInitializationException e)
             {
 
             }
-            //Predefined ready mouth and face structure is not recognized.
-            CascadeClassifier haar = new CascadeClassifier(@"D:\Projects\EmguCV-Smile-Detection\URL'S\haarcascade_frontalface_default.xml");
-            CascadeClassifier mthxml = new CascadeClassifier(@"D:\Projects\EmguCV-Smile-Detection\URL'S\haarcascade_smile.xml");
 
         }
 

@@ -62,3 +62,4 @@ D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.applicati
 D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.exe
 D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.pdb
 D:\Projects\EmguCV-Smile-Detection\EmguCVFace\obj\x64\Debug\EmguCVFace.csprojResolveAssemblyReference.cache
+D:\Projects\EmguCV-Smile-Detection\EmguCVFace\bin\x64\Debug\Emgu.CV.xml
